@@ -18,7 +18,7 @@ textarea {
 
 <h3>GENERA TU HOJA DE TRANSFERENCIA DE RIESGO</h3>
 
-<textarea id="data" placeholder="VIN   PUERTO   TRANSPORTE"></textarea><br>
+<textarea id="data" placeholder="VIN   PUERTO   DESTINO   TRANSPORTE"></textarea><br>
 
 <button onclick="generarPDF()">Descargar PDF</button>
 
@@ -77,14 +77,14 @@ async function generarPDF() {
                     const filasY = [
                         880,
                         960,
+                        1040,
                         1120,
                         1200,
                         1280,
                         1360,
                         1440,
                         1520,
-                        1600,
-                        1680
+                        1600
                     ];
 
                     let y = filasY[index];
@@ -98,6 +98,11 @@ async function generarPDF() {
                     pdf.setFont("helvetica", "bold");
                     pdf.setFontSize(40);
                     pdf.text(item.puerto, 900, y);
+                    
+                    // DESTINO
+                    pdf.setFont("helvetica", "bold");
+                    pdf.setFontSize(40);
+                    pdf.text(item.puerto, 1200, y);
                 });
 
                 // TRANSPORTE
