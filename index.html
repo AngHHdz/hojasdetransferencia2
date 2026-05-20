@@ -75,7 +75,7 @@ async function generarPDF() {
                 bloque.forEach((item, index) => {
 
                     const filasY = [
-                        925,
+                        910,
                         1005,
                         1085,
                         1165,
@@ -92,12 +92,12 @@ async function generarPDF() {
                     // VIN
                     pdf.setFont("helvetica", "bold");
                     pdf.setFontSize(44);
-                    pdf.text(item.vin, 245, y);
+                    pdf.text(item.vin, 225, y);
 
                     // PUERTO
                     pdf.setFont("helvetica", "bold");
                     pdf.setFontSize(40);
-                    pdf.text(item.puerto, 948, y);
+                    pdf.text(item.puerto, 928, y);
                 });
 
                 // TRANSPORTE
