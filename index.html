@@ -45,8 +45,8 @@ async function generarPDF() {
 
         lineas.forEach(l => {
             let p = l.split(/\t|,/);
-            if (p.length >= 3) {
-                datos.push({ vin: p[0], puerto: p[1], destino: p[2] transporte: p[3] });
+            if (p.length >= 4) {
+                datos.push({ vin: p[0], puerto: p[1], destino: p[2], transporte: p[3] });
             }
         });
 
